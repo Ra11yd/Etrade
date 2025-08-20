@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Capacitação Técnica E-Trade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#00A6FB] uppercase">Capacitação Técnica</h1>
+            <p class="text-xl md:text-2xl font-bold text-[#DC0073]">Guia Rápido de Implantação e Suporte E-Trade</p>
+        </header>
+
+        <main class="space-y-12">
+            
+            <section id="ferramentas" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#FF7A00]">🚀 Ferramentas Essenciais do Técnico</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Para um suporte ágil e eficiente, domine estas ferramentas. Elas são a base do seu dia a dia para gerenciar atendimentos e comunicar soluções de forma clara.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-[#00A6FB] text-white p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">🗂️</span>
+                        <h3 class="text-2xl font-bold mt-4">Back-Office</h3>
+                        <p class="mt-2">Seu centro de comando para gerenciar a **fila de atendimentos (Push)** e consultar **cadastros (Acessos)**.</p>
+                    </div>
+                    <div class="bg-[#DC0073] text-white p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">📸</span>
+                        <h3 class="text-2xl font-bold mt-4">LightShot</h3>
+                        <p class="mt-2">Ideal para **capturas de tela rápidas**. Selecione, marque e envie apenas o que importa para o cliente.</p>
+                    </div>
+                    <div class="bg-[#FF7A00] text-white p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">🎥</span>
+                        <h3 class="text-2xl font-bold mt-4">Loom</h3>
+                        <p class="mt-2">Perfeito para **gravar vídeos curtos** e tutoriais, demonstrando processos complexos de forma visual.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="arquitetura" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#00A6FB]">🏗️ A Arquitetura do Sistema: A Ordem Correta</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">A instalação do ambiente segue uma ordem lógica e obrigatória. Pense nisso como construir uma casa: primeiro a fundação, depois as paredes.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="text-center p-6 bg-gray-50 rounded-lg border-2 border-[#00A6FB]">
+                        <div class="text-4xl font-black text-[#00A6FB]">1</div>
+                        <h3 class="text-xl font-bold mt-2">Instalar SQL Server</h3>
+                        <p class="text-sm mt-1">A base de dados. **Apenas no SERVIDOR**.</p>
+                    </div>
+                    <div class="text-5xl font-bold text-[#41EAD4]">→</div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg border-2 border-[#DC0073]">
+                        <div class="text-4xl font-black text-[#DC0073]">2</div>
+                        <h3 class="text-xl font-bold mt-2">Instalar E-Trade</h3>
+                        <p class="text-sm mt-1">O sistema que o cliente utiliza.</p>
+                    </div>
+                    <div class="text-5xl font-bold text-[#41EAD4]">→</div>
+                     <div class="text-center p-6 bg-gray-50 rounded-lg border-2 border-[#FF7A00]">
+                        <div class="text-4xl font-black text-[#FF7A00]">3</div>
+                        <h3 class="text-xl font-bold mt-2">Ligar a Base</h3>
+                        <p class="text-sm mt-1">Conectar o sistema ao banco de dados.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="versoes" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#DC0073]">🚦 Ponto de Atenção: Stable vs. Unstable</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">A escolha da versão é uma decisão crítica que impacta a estabilidade e os recursos disponíveis para o cliente. Entender a diferença é fundamental para evitar problemas graves.</p>
+                <div class="chart-container">
+                    <canvas id="versionChart"></canvas>
+                </div>
+                 <div class="mt-8 p-4 bg-red-100 border-l-4 border-red-500 text-red-700">
+                    <p class="font-bold">REGRA DE OURO:</p>
+                    <p>NUNCA instale uma versão **Stable** sobre uma **Unstable**. Isso corrompe o banco de dados e o sistema não aceita o "downgrade".</p>
+                </div>
+            </section>
+            
+            <section id="redes" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#41EAD4]">↔️ Conectando a Empresa: Tipos de Rede</h2>
+                 <p class="text-center max-w-3xl mx-auto mb-8">A pergunta-chave para definir a arquitetura é: "O cliente precisa de dados em tempo real ou a operação não pode parar?". A resposta define o tipo de conexão.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="border-2 border-[#00A6FB] rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-[#00A6FB]">Rede Direta</h3>
+                        <p class="mt-2 font-semibold">Ideal para: Pré-venda, escritórios.</p>
+                        <p class="mt-4">As estações se conectam diretamente ao servidor. A informação é **imediata**, mas se o servidor para, **todas as estações param**.</p>
+                    </div>
+                    <div class="border-2 border-[#DC0073] rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-[#DC0073]">Bridge</h3>
+                        <p class="mt-2 font-semibold">Ideal para: Frente de loja, supermercados.</p>
+                        <p class="mt-4">O PDV tem um banco local e sincroniza com o servidor. Se o servidor cair, o **PDV continua vendendo**.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="guia-pratico" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#FF7A00]">🛠️ Guia Prático: Configurando a Rede Direta</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Siga estes passos para estabelecer a comunicação entre o servidor e as estações. A configuração é dividida entre os dois ambientes.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-center text-[#00A6FB]">Passo 1: No SERVIDOR</h3>
+                        <ol class="list-decimal list-inside mt-4 space-y-2">
+                            <li>**Firewall:** Crie uma "Regra de Entrada" para liberar uma porta TCP (ex: 1433).</li>
+                            <li>**SQL Config. Manager:** Habilite o protocolo TCP/IP e configure a mesma porta.</li>
+                            <li>**Serviços:** Reinicie o serviço da instância SQL para aplicar as alterações.</li>
+                        </ol>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-center text-[#DC0073]">Passo 2: Na ESTAÇÃO CLIENTE</h3>
+                        <ol class="list-decimal list-inside mt-4 space-y-2">
+                            <li>**Arquivo `ARC-D.ini`:** Altere `DataSource` para o IP do servidor e a porta.</li>
+                            <li>**Teste:** Use o comando `ping IP_DO_SERVIDOR` para confirmar a comunicação.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="boas-praticas" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#DC0073]">🏆 Regras de Ouro do Suporte</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Estas práticas não são apenas recomendações, são a sua rede de segurança. Elas protegem o cliente e respaldam o seu trabalho.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div class="bg-[#F2E94E] text-gray-800 p-8 rounded-lg shadow-md">
+                        <div class="text-6xl font-black">#1</div>
+                        <h3 class="text-2xl font-bold mt-4">Documente Tudo</h3>
+                        <p class="mt-2">O **Relato Técnico** é a sua documentação e segurança. Resuma o problema e a solução aplicada ao final de cada atendimento.</p>
+                    </div>
+                    <div class="bg-red-500 text-white p-8 rounded-lg shadow-md">
+                        <div class="text-6xl font-black">#2</div>
+                        <h3 class="text-2xl font-bold mt-4">Peça o Backup!</h3>
+                        <p class="mt-2">**SEMPRE** peça para o cliente fazer um **BACKUP** antes de executar qualquer comando no banco de dados. Confirme no chat!</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 text-gray-500">
+            <p>&copy; 2025 Capacitação E-Trade. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines.filter(line => line.length > 0);
+        }
+
+        const ctx = document.getElementById('versionChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Stable (Estável)', 'Unstable (Instável)'],
+                datasets: [{
+                    label: 'Estabilidade',
+                    data: [95, 60],
+                    backgroundColor: '#00A6FB',
+                    borderColor: '#00A6FB',
+                    borderWidth: 1
+                }, {
+                    label: 'Novos Recursos',
+                    data: [30, 90],
+                    backgroundColor: '#DC0073',
+                    borderColor: '#DC0073',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Comparativo de Versões: Estabilidade vs. Recursos',
+                        font: {
+                            size: 18
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 30
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
