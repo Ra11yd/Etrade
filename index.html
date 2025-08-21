@@ -97,6 +97,24 @@
                     <p>NUNCA instale uma versão **Stable** sobre uma **Unstable**. Isso corrompe o banco de dados e o sistema não aceita o "downgrade".</p>
                 </div>
             </section>
+
+            <section id="backups" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#00A6FB]">💾 Dominando Backups: Sua Rede de Segurança</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Saber configurar e gerenciar backups é uma das habilidades mais importantes. Conheça as principais ferramentas e métodos para proteger os dados do cliente.</p>
+                <div class="chart-container">
+                    <canvas id="backupChart"></canvas>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#FF7A00]">
+                        <h3 class="text-xl font-bold text-[#FF7A00]">Programa Backup (Nativo)</h3>
+                        <p class="mt-2">Simples e direto. Ideal para backups locais agendados. **Atenção:** o backup só roda no horário exato configurado e se o PC estiver ligado.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#41EAD4]">
+                        <h3 class="text-xl font-bold text-[#41EAD4]">Backup Manual para Atualizações</h3>
+                        <p class="mt-2">Processo essencial antes de qualquer atualização. Pare o serviço do SQL, copie a pasta do E-Trade e renomeie. É a forma mais segura de reverter uma atualização mal-sucedida.</p>
+                    </div>
+                </div>
+            </section>
             
             <section id="redes" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
                 <h2 class="text-3xl font-bold text-center mb-6 text-[#41EAD4]">↔️ Conectando a Empresa: Tipos de Rede</h2>
@@ -116,23 +134,38 @@
             </section>
 
             <section id="guia-pratico" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#FF7A00]">🛠️ Guia Prático: Configurando a Rede Direta</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">Siga estes passos para estabelecer a comunicação entre o servidor e as estações. A configuração é dividida entre os dois ambientes.</p>
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#FF7A00]">🛠️ Guia Prático: Configurando Conexões</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Siga estes passos para estabelecer a comunicação entre o servidor e as estações, seja em Rede Direta ou Bridge.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-center text-[#00A6FB]">Passo 1: No SERVIDOR</h3>
+                        <h3 class="text-2xl font-bold text-center text-[#00A6FB]">Rede Direta</h3>
                         <ol class="list-decimal list-inside mt-4 space-y-2">
-                            <li>**Firewall:** Crie uma "Regra de Entrada" para liberar uma porta TCP (ex: 1433).</li>
-                            <li>**SQL Config. Manager:** Habilite o protocolo TCP/IP e configure a mesma porta.</li>
-                            <li>**Serviços:** Reinicie o serviço da instância SQL para aplicar as alterações.</li>
+                            <li>**No Servidor:** Libere uma porta TCP no Firewall e habilite o protocolo TCP/IP no SQL Config Manager.</li>
+                            <li>**Na Estação:** Altere o arquivo `ARQ-ID` com o IP e a porta do servidor.</li>
                         </ol>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-center text-[#DC0073]">Passo 2: Na ESTAÇÃO CLIENTE</h3>
+                        <h3 class="text-2xl font-bold text-center text-[#DC0073]">Bridge</h3>
                         <ol class="list-decimal list-inside mt-4 space-y-2">
-                            <li>**Arquivo `ARC-D.ini`:** Altere `DataSource` para o IP do servidor e a porta.</li>
-                            <li>**Teste:** Use o comando `ping IP_DO_SERVIDOR` para confirmar a comunicação.</li>
+                            <li>**No Servidor:** Defina uma senha para o Bridge no cadastro da filial.</li>
+                            <li>**Na Estação:** Configure o IP do servidor no Programa Bridge e ative o "Modo Bridge".</li>
+                             <li>**Autorização:** Volte ao servidor para autorizar a nova estação Bridge.</li>
                         </ol>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="licenca" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#41EAD4]">🔑 Primeiros Passos: Registro e Licença</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Ao acessar o sistema pela primeira vez, o registro do serial e a validação da licença são etapas cruciais para o funcionamento.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-center">1. Registro do Serial</h3>
+                        <p class="mt-4">Na primeira tela, insira o **serial do cliente** (encontrado no BackOffice). Marque a opção "Carregar dados" para que o sistema puxe as informações da empresa automaticamente pelo CNPJ.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-center">2. Validação da Licença</h3>
+                        <p class="mt-4">Uma tela de aviso aparecerá **7 dias antes do vencimento**. O cliente pode pagar via PIX/Boleto. Após o pagamento, basta clicar em **"Confirmar Liberação"** para atualizar os dias de licença.</p>
                     </div>
                 </div>
             </section>
@@ -181,8 +214,17 @@
             return lines.filter(line => line.length > 0);
         }
 
-        const ctx = document.getElementById('versionChart').getContext('2d');
-        new Chart(ctx, {
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const versionCtx = document.getElementById('versionChart').getContext('2d');
+        new Chart(versionCtx, {
             type: 'bar',
             data: {
                 labels: ['Stable (Estável)', 'Unstable (Instável)'],
@@ -218,27 +260,56 @@
                     title: {
                         display: true,
                         text: 'Comparativo de Versões: Estabilidade vs. Recursos',
-                        font: {
-                            size: 18
-                        },
-                        padding: {
-                            top: 10,
-                            bottom: 30
-                        }
+                        font: { size: 18 },
+                        padding: { top: 10, bottom: 30 }
                     },
-                    tooltip: {
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                const item = tooltipItems[0];
-                                let label = item.chart.data.labels[item.dataIndex];
-                                if (Array.isArray(label)) {
-                                  return label.join(' ');
-                                } else {
-                                  return label;
-                                }
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        const backupCtx = document.getElementById('backupChart').getContext('2d');
+        new Chart(backupCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Integração com Nuvem', 'Flexibilidade de Agendamento', 'Facilidade de Restauração'],
+                datasets: [{
+                    label: 'SQL Backup Master',
+                    data: [100, 80, 60],
+                    backgroundColor: '#00A6FB',
+                    borderColor: '#00A6FB',
+                    borderWidth: 1
+                }, {
+                    label: 'Programa Backup (Nativo)',
+                    data: [20, 50, 90],
+                    backgroundColor: '#DC0073',
+                    borderColor: '#DC0073',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
                             }
                         }
                     }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Comparativo de Ferramentas de Backup',
+                        font: { size: 18 },
+                        padding: { top: 10, bottom: 30 }
+                    },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
                 }
             }
         });
