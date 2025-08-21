@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infográfico: Capacitação Técnica E-Trade</title>
+    <title>Infográfico Detalhado: Capacitação Técnica E-Trade</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,187 +33,194 @@
 
     <div class="container mx-auto p-4 md:p-8">
 
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-black text-[#00A6FB] uppercase">Capacitação Técnica</h1>
-            <p class="text-xl md:text-2xl font-bold text-[#DC0073]">Guia Rápido de Implantação e Suporte E-Trade</p>
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003B73] uppercase tracking-wider">Guia de Suporte E-Trade</h1>
+            <p class="text-xl md:text-2xl font-bold text-[#DC0073]">Um Manual Completo de Implantação e Manutenção</p>
         </header>
 
-        <main class="space-y-12">
+        <main class="space-y-16">
             
-            <section id="ferramentas" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#FF7A00]">🚀 Ferramentas Essenciais do Técnico</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">Para um suporte ágil e eficiente, domine estas ferramentas. Elas são a base do seu dia a dia para gerenciar atendimentos e comunicar soluções de forma clara.</p>
+            <section id="ferramentas">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#0074D9]">Módulo 1: Ferramentas Essenciais do Técnico</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-[#00A6FB] text-white p-6 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-[#0074D9]">
                         <span class="text-5xl">🗂️</span>
                         <h3 class="text-2xl font-bold mt-4">Back-Office</h3>
-                        <p class="mt-2">Seu centro de comando para gerenciar a **fila de atendimentos (Push)** e consultar **cadastros (Acessos)**.</p>
+                        <p class="mt-2">Seu centro de comando para gerenciar a **fila de atendimentos (Push)** e consultar **cadastros e seriais (Acessos)**.</p>
                     </div>
-                    <div class="bg-[#DC0073] text-white p-6 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-[#DC0073]">
                         <span class="text-5xl">📸</span>
                         <h3 class="text-2xl font-bold mt-4">LightShot</h3>
-                        <p class="mt-2">Ideal para **capturas de tela rápidas**. Selecione, marque e envie apenas o que importa para o cliente.</p>
+                        <p class="mt-2">Ideal para **capturas de tela rápidas**. Selecione, anote e envie um link da imagem para agilizar a comunicação.</p>
                     </div>
-                    <div class="bg-[#FF7A00] text-white p-6 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-[#FF7A00]">
                         <span class="text-5xl">🎥</span>
                         <h3 class="text-2xl font-bold mt-4">Loom</h3>
-                        <p class="mt-2">Perfeito para **gravar vídeos curtos** e tutoriais, demonstrando processos complexos de forma visual.</p>
+                        <p class="mt-2">Perfeito para **gravar vídeos curtos** e tutoriais, demonstrando processos complexos de forma visual e eficaz.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="arquitetura" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#00A6FB]">🏗️ A Arquitetura do Sistema: A Ordem Correta</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">A instalação do ambiente segue uma ordem lógica e obrigatória. Pense nisso como construir uma casa: primeiro a fundação, depois as paredes.</p>
-                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="text-center p-6 bg-gray-50 rounded-lg border-2 border-[#00A6FB]">
-                        <div class="text-4xl font-black text-[#00A6FB]">1</div>
-                        <h3 class="text-xl font-bold mt-2">Instalar SQL Server</h3>
-                        <p class="text-sm mt-1">A base de dados. **Apenas no SERVIDOR**.</p>
+            <section id="instalacao">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Módulo 2: O Processo de Instalação</h2>
+                 <p class="text-center max-w-3xl mx-auto mb-8">Siga este fluxo rigorosamente para garantir uma implantação bem-sucedida, evitando os erros mais comuns.</p>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-[#0074D9]">Passos da Instalação</h3>
+                            <ol class="list-decimal list-inside space-y-4">
+                                <li>**Instalar SQL Server 2019 Express:** A fundação do sistema. Lembre-se: **apenas no SERVIDOR**.</li>
+                                <li>**Instalar SSMS (Opcional, mas recomendado):** A interface gráfica para gerenciar o banco de dados.</li>
+                                <li>**Instalar E-Trade:** O sistema em si, prestando atenção crucial à versão.</li>
+                                <li>**Conectar com `Liga Base`:** A etapa final que une o sistema ao banco de dados.</li>
+                            </ol>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="versionChart"></canvas>
+                        </div>
                     </div>
-                    <div class="text-5xl font-bold text-[#41EAD4]">→</div>
-                    <div class="text-center p-6 bg-gray-50 rounded-lg border-2 border-[#DC0073]">
-                        <div class="text-4xl font-black text-[#DC0073]">2</div>
-                        <h3 class="text-xl font-bold mt-2">Instalar E-Trade</h3>
-                        <p class="text-sm mt-1">O sistema que o cliente utiliza.</p>
-                    </div>
-                    <div class="text-5xl font-bold text-[#41EAD4]">→</div>
-                     <div class="text-center p-6 bg-gray-50 rounded-lg border-2 border-[#FF7A00]">
-                        <div class="text-4xl font-black text-[#FF7A00]">3</div>
-                        <h3 class="text-xl font-bold mt-2">Ligar a Base</h3>
-                        <p class="text-sm mt-1">Conectar o sistema ao banco de dados.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="versoes" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#DC0073]">🚦 Ponto de Atenção: Stable vs. Unstable</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">A escolha da versão é uma decisão crítica que impacta a estabilidade e os recursos disponíveis para o cliente. Entender a diferença é fundamental para evitar problemas graves.</p>
-                <div class="chart-container">
-                    <canvas id="versionChart"></canvas>
-                </div>
-                 <div class="mt-8 p-4 bg-red-100 border-l-4 border-red-500 text-red-700">
-                    <p class="font-bold">REGRA DE OURO:</p>
-                    <p>NUNCA instale uma versão **Stable** sobre uma **Unstable**. Isso corrompe o banco de dados e o sistema não aceita o "downgrade".</p>
-                </div>
-            </section>
-
-            <section id="backups" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#00A6FB]">💾 Dominando Backups: Sua Rede de Segurança</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">Saber configurar e gerenciar backups é uma das habilidades mais importantes. Conheça as principais ferramentas e métodos para proteger os dados do cliente.</p>
-                <div class="chart-container">
-                    <canvas id="backupChart"></canvas>
-                </div>
-                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#FF7A00]">
-                        <h3 class="text-xl font-bold text-[#FF7A00]">Programa Backup (Nativo)</h3>
-                        <p class="mt-2">Simples e direto. Ideal para backups locais agendados. **Atenção:** o backup só roda no horário exato configurado e se o PC estiver ligado.</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#41EAD4]">
-                        <h3 class="text-xl font-bold text-[#41EAD4]">Backup Manual para Atualizações</h3>
-                        <p class="mt-2">Processo essencial antes de qualquer atualização. Pare o serviço do SQL, copie a pasta do E-Trade e renomeie. É a forma mais segura de reverter uma atualização mal-sucedida.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="redes" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#41EAD4]">↔️ Conectando a Empresa: Tipos de Rede</h2>
-                 <p class="text-center max-w-3xl mx-auto mb-8">A pergunta-chave para definir a arquitetura é: "O cliente precisa de dados em tempo real ou a operação não pode parar?". A resposta define o tipo de conexão.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="border-2 border-[#00A6FB] rounded-lg p-6">
-                        <h3 class="text-2xl font-bold text-[#00A6FB]">Rede Direta</h3>
-                        <p class="mt-2 font-semibold">Ideal para: Pré-venda, escritórios.</p>
-                        <p class="mt-4">As estações se conectam diretamente ao servidor. A informação é **imediata**, mas se o servidor para, **todas as estações param**.</p>
-                    </div>
-                    <div class="border-2 border-[#DC0073] rounded-lg p-6">
-                        <h3 class="text-2xl font-bold text-[#DC0073]">Bridge</h3>
-                        <p class="mt-2 font-semibold">Ideal para: Frente de loja, supermercados.</p>
-                        <p class="mt-4">O PDV tem um banco local e sincroniza com o servidor. Se o servidor cair, o **PDV continua vendendo**.</p>
+                    <div class="mt-8 p-4 bg-red-100 border-l-4 border-red-500 text-red-700 rounded-r-lg">
+                        <p class="font-bold">⚠️ ALERTA MÁXIMO:</p>
+                        <p>Nunca instale uma versão **Stable** sobre uma **Unstable**. Isso corrompe a estrutura do banco de dados e exige um backup para recuperação.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="guia-pratico" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#FF7A00]">🛠️ Guia Prático: Configurando Conexões</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">Siga estes passos para estabelecer a comunicação entre o servidor e as estações, seja em Rede Direta ou Bridge.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-center text-[#00A6FB]">Rede Direta</h3>
-                        <ol class="list-decimal list-inside mt-4 space-y-2">
-                            <li>**No Servidor:** Libere uma porta TCP no Firewall e habilite o protocolo TCP/IP no SQL Config Manager.</li>
-                            <li>**Na Estação:** Altere o arquivo `ARQ-ID` com o IP e a porta do servidor.</li>
-                        </ol>
+            <section id="backups">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#2ECC40]">Módulo 3: Gerenciamento de Backups</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Proteger os dados do cliente é sua principal responsabilidade. Conheça os métodos e escolha o mais adequado para cada situação.</p>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="chart-container">
+                         <canvas id="backupChart"></canvas>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-center text-[#DC0073]">Bridge</h3>
-                        <ol class="list-decimal list-inside mt-4 space-y-2">
-                            <li>**No Servidor:** Defina uma senha para o Bridge no cadastro da filial.</li>
-                            <li>**Na Estação:** Configure o IP do servidor no Programa Bridge e ative o "Modo Bridge".</li>
-                             <li>**Autorização:** Volte ao servidor para autorizar a nova estação Bridge.</li>
+                    <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4">Método de Ouro: Backup Manual para Atualizações</h3>
+                        <p>Antes de qualquer atualização, siga este processo para garantir uma reversão segura:</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1 text-sm">
+                            <li>**Pare o serviço** da instância do SQL no `services.msc`.</li>
+                            <li>**Copie e cole** a pasta inteira do E-Trade.</li>
+                            <li>**Renomeie a cópia** com a data e suas iniciais (ex: `E-Trade - BKP 210825 DH`).</li>
+                            <li>**Reinicie o serviço** e realize a atualização na pasta original.</li>
                         </ol>
                     </div>
                 </div>
             </section>
-            
-            <section id="licenca" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#41EAD4]">🔑 Primeiros Passos: Registro e Licença</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">Ao acessar o sistema pela primeira vez, o registro do serial e a validação da licença são etapas cruciais para o funcionamento.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold text-center">1. Registro do Serial</h3>
-                        <p class="mt-4">Na primeira tela, insira o **serial do cliente** (encontrado no BackOffice). Marque a opção "Carregar dados" para que o sistema puxe as informações da empresa automaticamente pelo CNPJ.</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold text-center">2. Validação da Licença</h3>
-                        <p class="mt-4">Uma tela de aviso aparecerá **7 dias antes do vencimento**. O cliente pode pagar via PIX/Boleto. Após o pagamento, basta clicar em **"Confirmar Liberação"** para atualizar os dias de licença.</p>
+
+            <section id="redes">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF7A00]">Módulo 4: Arquiteturas de Rede</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">A escolha da arquitetura de rede impacta diretamente a performance e a resiliência da operação do cliente. Entenda as diferenças para recomendar a melhor solução.</p>
+                 <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div class="chart-container">
+                            <canvas id="networkChart"></canvas>
+                        </div>
+                        <div>
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold text-[#0074D9]">Rede Direta</h3>
+                                <p class="mt-2">Ideal para cenários que exigem dados em **tempo real**, como pré-vendas e escritórios. Todas as estações dependem diretamente do servidor.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#DC0073]">Bridge</h3>
+                                <p class="mt-2">Essencial para operações que **não podem parar**, como frentes de loja e supermercados. O PDV opera de forma autônoma e sincroniza os dados periodicamente.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="boas-praticas" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-center mb-6 text-[#DC0073]">🏆 Regras de Ouro do Suporte</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">Estas práticas não são apenas recomendações, são a sua rede de segurança. Elas protegem o cliente e respaldam o seu trabalho.</p>
+             <section id="guias-praticos">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Módulo 5: Guias de Configuração Prática</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-center text-[#0074D9] mb-4">Configurando Rede Direta</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold">1. No Servidor:</h4>
+                                <ul class="list-disc list-inside text-sm">
+                                    <li>Abra o Firewall do Windows e crie uma **Regra de Entrada** para uma porta **TCP** (ex: 1433).</li>
+                                    <li>No SQL Config Manager, **habilite o protocolo TCP/IP** e configure a mesma porta.</li>
+                                    <li>**Reinicie o serviço** da instância SQL.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">2. Na Estação Cliente:</h4>
+                                <ul class="list-disc list-inside text-sm">
+                                    <li>No arquivo `ARQ-ID`, altere o `DataSource` para: `IP_DO_SERVIDOR,PORTA`.</li>
+                                    <li>Use o comando `ping` no CMD para testar a comunicação.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-center text-[#DC0073] mb-4">Configurando Bridge</h3>
+                        <div class="space-y-4">
+                             <div>
+                                <h4 class="font-bold">1. No Servidor:</h4>
+                                <ul class="list-disc list-inside text-sm">
+                                    <li>No E-Trade, vá em `Configurações > Filial` e defina uma **senha para o Bridge** na aba "Adicionais".</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">2. Na Estação Bridge:</h4>
+                                <ul class="list-disc list-inside text-sm">
+                                     <li>Use o **banco de dados específico para Bridge**.</li>
+                                    <li>Abra o `Programa Bridge`, configure o IP do servidor e a senha.</li>
+                                    <li>Ative o **"Modo Bridge"** (geralmente PDV).</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">3. Autorização Final:</h4>
+                                <ul class="list-disc list-inside text-sm">
+                                    <li>Volte ao servidor, em `Configurações > Filial > Bridge`, e **autorize a nova estação**.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="primeiros-passos">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF7A00]">Módulo 6: Primeiros Passos do Cliente</h2>
+                <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-center">
+                        <div class="text-6xl font-black text-[#FF7A00]">1</div>
+                        <h3 class="text-xl font-bold mt-2">Registro do Serial</h3>
+                        <p class="mt-2 text-sm">Na primeira tela, insira o serial do cliente. Marque a checkbox **"Carregar dados"** para que o sistema puxe as informações da empresa (CNPJ, Razão Social) automaticamente.</p>
+                    </div>
+                    <div class="text-5xl font-bold text-gray-300 hidden md:block">→</div>
+                    <div class="text-center">
+                         <div class="text-6xl font-black text-[#FF7A00]">2</div>
+                        <h3 class="text-xl font-bold mt-2">Validação da Licença</h3>
+                        <p class="mt-2 text-sm">O aviso de vencimento aparece 7 dias antes. O cliente pode pagar via PIX/Boleto. Após o pagamento, ele deve clicar em **"Confirmar Liberação"** para atualizar os dias de licença.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="regras-de-ouro">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#DC0073]">Módulo 7: Regras de Ouro do Suporte</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-                    <div class="bg-[#F2E94E] text-gray-800 p-8 rounded-lg shadow-md">
+                    <div class="bg-[#F2E94E] text-gray-800 p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
                         <div class="text-6xl font-black">#1</div>
                         <h3 class="text-2xl font-bold mt-4">Documente Tudo</h3>
-                        <p class="mt-2">O **Relato Técnico** é a sua documentação e segurança. Resuma o problema e a solução aplicada ao final de cada atendimento.</p>
+                        <p class="mt-2">O **Relato Técnico** é a sua documentação e segurança. Resuma o problema e a solução aplicada ao final de cada atendimento. Seja claro e objetivo.</p>
                     </div>
-                    <div class="bg-red-500 text-white p-8 rounded-lg shadow-md">
+                    <div class="bg-red-500 text-white p-8 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
                         <div class="text-6xl font-black">#2</div>
                         <h3 class="text-2xl font-bold mt-4">Peça o Backup!</h3>
-                        <p class="mt-2">**SEMPRE** peça para o cliente fazer um **BACKUP** antes de executar qualquer comando no banco de dados. Confirme no chat!</p>
+                        <p class="mt-2">**SEMPRE** peça para o revendedor fazer um **BACKUP** antes de executar qualquer comando no banco de dados. Confirme no chat e aguarde a confirmação dele!</p>
                     </div>
                 </div>
             </section>
 
         </main>
 
-        <footer class="text-center mt-12 text-gray-500">
+        <footer class="text-center mt-16 text-gray-500">
             <p>&copy; 2025 Capacitação E-Trade. Todos os direitos reservados.</p>
         </footer>
 
     </div>
 
     <script>
-        function wrapLabel(str, maxWidth) {
-            if (str.length <= maxWidth) {
-                return str;
-            }
-            const words = str.split(' ');
-            let lines = [];
-            let currentLine = '';
-            for (const word of words) {
-                if ((currentLine + word).length > maxWidth) {
-                    lines.push(currentLine.trim());
-                    currentLine = '';
-                }
-                currentLine += word + ' ';
-            }
-            lines.push(currentLine.trim());
-            return lines.filter(line => line.length > 0);
-        }
-
         const tooltipTitleCallback = (tooltipItems) => {
             const item = tooltipItems[0];
             let label = item.chart.data.labels[item.dataIndex];
@@ -231,38 +238,18 @@
                 datasets: [{
                     label: 'Estabilidade',
                     data: [95, 60],
-                    backgroundColor: '#00A6FB',
-                    borderColor: '#00A6FB',
-                    borderWidth: 1
+                    backgroundColor: '#0074D9',
                 }, {
                     label: 'Novos Recursos',
                     data: [30, 90],
                     backgroundColor: '#DC0073',
-                    borderColor: '#DC0073',
-                    borderWidth: 1
                 }]
             },
             options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100,
-                        ticks: {
-                            callback: function(value) {
-                                return value + '%'
-                            }
-                        }
-                    }
-                },
+                responsive: true, maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true, max: 100, ticks: { callback: (v) => v + '%' } } },
                 plugins: {
-                    title: {
-                        display: true,
-                        text: 'Comparativo de Versões: Estabilidade vs. Recursos',
-                        font: { size: 18 },
-                        padding: { top: 10, bottom: 30 }
-                    },
+                    title: { display: true, text: 'Comparativo: Estabilidade vs. Recursos', font: { size: 16 }, padding: { bottom: 20 } },
                     tooltip: { callbacks: { title: tooltipTitleCallback } }
                 }
             }
@@ -276,39 +263,63 @@
                 datasets: [{
                     label: 'SQL Backup Master',
                     data: [100, 80, 60],
-                    backgroundColor: '#00A6FB',
-                    borderColor: '#00A6FB',
-                    borderWidth: 1
+                    backgroundColor: '#0074D9',
                 }, {
                     label: 'Programa Backup (Nativo)',
                     data: [20, 50, 90],
                     backgroundColor: '#DC0073',
-                    borderColor: '#DC0073',
-                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+                scales: { x: { beginAtZero: true, max: 100, ticks: { callback: (v) => v + '%' } } },
+                plugins: {
+                    title: { display: true, text: 'Comparativo de Ferramentas de Backup', font: { size: 16 }, padding: { bottom: 20 } },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+        
+        const networkCtx = document.getElementById('networkChart').getContext('2d');
+        new Chart(networkCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Performance em Tempo Real', 'Tolerância a Falhas', 'Simplicidade de Configuração', 'Dependência do Servidor'],
+                datasets: [{
+                    label: 'Rede Direta',
+                    data: [9, 2, 8, 10],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 116, 217, 0.2)',
+                    borderColor: 'rgb(0, 116, 217)',
+                    pointBackgroundColor: 'rgb(0, 116, 217)',
+                }, {
+                    label: 'Bridge',
+                    data: [3, 9, 5, 2],
+                    fill: true,
+                    backgroundColor: 'rgba(220, 0, 115, 0.2)',
+                    borderColor: 'rgb(220, 0, 115)',
+                    pointBackgroundColor: 'rgb(220, 0, 115)',
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                indexAxis: 'y',
+                elements: {
+                  line: {
+                    borderWidth: 3
+                  }
+                },
                 scales: {
-                    x: {
-                        beginAtZero: true,
-                        max: 100,
-                        ticks: {
-                            callback: function(value) {
-                                return value + '%'
-                            }
-                        }
+                    r: {
+                        angleLines: {
+                            display: false
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10
                     }
                 },
                 plugins: {
-                    title: {
-                        display: true,
-                        text: 'Comparativo de Ferramentas de Backup',
-                        font: { size: 18 },
-                        padding: { top: 10, bottom: 30 }
-                    },
+                    title: { display: true, text: 'Análise de Arquiteturas de Rede', font: { size: 16 }, padding: { bottom: 20 } },
                     tooltip: { callbacks: { title: tooltipTitleCallback } }
                 }
             }
