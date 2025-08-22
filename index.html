@@ -69,10 +69,16 @@
                         <div>
                             <h3 class="text-2xl font-bold mb-4 text-[#0074D9]">Passos da Instalação</h3>
                             <ol class="list-decimal list-inside space-y-4">
-                                <li>**Instalar SQL Server 2019 Express:** A fundação do sistema. Lembre-se: **apenas no SERVIDOR**.</li>
-                                <li>**Instalar SSMS (Opcional, mas recomendado):** A interface gráfica para gerenciar o banco de dados.</li>
-                                <li>**Instalar E-Trade:** O sistema em si, prestando atenção crucial à versão.</li>
-                                <li>**Conectar com `Liga Base`:** A etapa final que une o sistema ao banco de dados.</li>
+                                <li>
+                                    **Instalar SQL Server 2019:** A fundação do sistema.
+                                    <ul class="list-disc list-inside ml-4 text-sm mt-1">
+                                        <li>**Express:** Gratuito, ideal para a maioria dos clientes (limite de 10GB).</li>
+                                        <li>**Full:** Pago, sem limitações, para clientes com grande volume de dados.</li>
+                                    </ul>
+                                </li>
+                                <li>**Instalar E-Trade:** O sistema em si, prestando atenção crucial à versão (Stable vs. Unstable).</li>
+                                <li>**Conectar com `Liga Base`:** A etapa que une o sistema ao banco de dados.</li>
+                                <li>**Executar `Update Automático`:** Sincroniza a versão do banco de dados com a versão exigida pelo E-Trade.</li>
                             </ol>
                         </div>
                         <div class="chart-container">
@@ -86,28 +92,46 @@
                 </div>
             </section>
 
+            <section id="primeiros-passos">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF7A00]">Módulo 3: Primeiros Passos do Cliente</h2>
+                <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-center">
+                        <div class="text-6xl font-black text-[#FF7A00]">1</div>
+                        <h3 class="text-xl font-bold mt-2">Registro do Serial</h3>
+                        <p class="mt-2 text-sm">Na primeira tela, insira o serial do cliente. Marque a checkbox **"Carregar dados"** para que o sistema puxe as informações da empresa (CNPJ, Razão Social) automaticamente.</p>
+                    </div>
+                    <div class="text-5xl font-bold text-gray-300 hidden md:block">→</div>
+                    <div class="text-center">
+                         <div class="text-6xl font-black text-[#FF7A00]">2</div>
+                        <h3 class="text-xl font-bold mt-2">Validação da Licença</h3>
+                        <p class="mt-2 text-sm">O aviso de vencimento aparece 7 dias antes. O cliente pode pagar via PIX/Boleto. Após o pagamento, ele deve clicar em **"Confirmar Liberação"** para atualizar os dias de licença.</p>
+                    </div>
+                </div>
+            </section>
+
             <section id="backups">
-                <h2 class="text-3xl font-bold text-center mb-8 text-[#2ECC40]">Módulo 3: Gerenciamento de Backups</h2>
-                <p class="text-center max-w-3xl mx-auto mb-8">Proteger os dados do cliente é sua principal responsabilidade. Conheça os métodos e escolha o mais adequado para cada situação.</p>
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#2ECC40]">Módulo 4: Gerenciamento de Backups</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Proteger os dados do cliente é sua principal responsabilidade. Conheça as ferramentas e escolha a mais adequada para cada situação.</p>
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <div class="chart-container">
                          <canvas id="backupChart"></canvas>
                     </div>
                     <div class="mt-8 p-6 bg-gray-50 rounded-lg">
-                        <h3 class="text-xl font-bold mb-4">Método de Ouro: Backup Manual para Atualizações</h3>
-                        <p>Antes de qualquer atualização, siga este processo para garantir uma reversão segura:</p>
+                        <h3 class="text-xl font-bold mb-4">Passo a Passo: Backup com `Programa Backup` (Nativo)</h3>
+                        <p>Para backups locais rápidos e agendados, use a ferramenta nativa do E-Trade:</p>
                         <ol class="list-decimal list-inside mt-2 space-y-1 text-sm">
-                            <li>**Pare o serviço** da instância do SQL no `services.msc`.</li>
-                            <li>**Copie e cole** a pasta inteira do E-Trade.</li>
-                            <li>**Renomeie a cópia** com a data e suas iniciais (ex: `E-Trade - BKP 210825 DH`).</li>
-                            <li>**Reinicie o serviço** e realize a atualização na pasta original.</li>
+                            <li>Abra o `Programa Backup.exe` na pasta do E-Trade.</li>
+                            <li>Na aba **"Gerar"**, clique em "..." para escolher o local onde o backup será salvo.</li>
+                            <li>Marque a opção **"Compactar"** para economizar espaço.</li>
+                            <li>Clique em **"Gerar Backup"** para criar um backup instantâneo.</li>
+                            <li>Para agendar, vá na aba **"Configuração"**, defina o horário e os dias, e adicione um atalho do programa na pasta de inicialização do Windows (`shell:startup`).</li>
                         </ol>
                     </div>
                 </div>
             </section>
 
             <section id="redes">
-                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF7A00]">Módulo 4: Arquiteturas de Rede</h2>
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF7A00]">Módulo 5: Arquiteturas de Rede</h2>
                 <p class="text-center max-w-3xl mx-auto mb-8">A escolha da arquitetura de rede impacta diretamente a performance e a resiliência da operação do cliente. Entenda as diferenças para recomendar a melhor solução.</p>
                  <div class="bg-white rounded-lg shadow-lg p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -128,23 +152,6 @@
                 </div>
             </section>
 
-            <section id="primeiros-passos">
-                <h2 class="text-3xl font-bold text-center mb-8 text-[#FF7A00]">Módulo 5: Primeiros Passos do Cliente</h2>
-                <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8">
-                    <div class="text-center">
-                        <div class="text-6xl font-black text-[#FF7A00]">1</div>
-                        <h3 class="text-xl font-bold mt-2">Registro do Serial</h3>
-                        <p class="mt-2 text-sm">Na primeira tela, insira o serial do cliente. Marque a checkbox **"Carregar dados"** para que o sistema puxe as informações da empresa (CNPJ, Razão Social) automaticamente.</p>
-                    </div>
-                    <div class="text-5xl font-bold text-gray-300 hidden md:block">→</div>
-                    <div class="text-center">
-                         <div class="text-6xl font-black text-[#FF7A00]">2</div>
-                        <h3 class="text-xl font-bold mt-2">Validação da Licença</h3>
-                        <p class="mt-2 text-sm">O aviso de vencimento aparece 7 dias antes. O cliente pode pagar via PIX/Boleto. Após o pagamento, ele deve clicar em **"Confirmar Liberação"** para atualizar os dias de licença.</p>
-                    </div>
-                </div>
-            </section>
-
              <section id="guias-praticos">
                 <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Módulo 6: Guias de Configuração Prática</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -154,7 +161,7 @@
                             <div>
                                 <h4 class="font-bold">1. No Servidor:</h4>
                                 <ul class="list-disc list-inside text-sm">
-                                    <li>Abra o Firewall do Windows e crie uma **Regra de Entrada** para uma porta **TCP** (ex: 1433).</li>
+                                    <li>Abra o Firewall do Windows e crie uma **Regra de Entrada** para uma porta **TCP** (ex: 1434).</li>
                                     <li>No SQL Config Manager, **habilite o protocolo TCP/IP** e configure a mesma porta.</li>
                                     <li>**Reinicie o serviço** da instância SQL.</li>
                                 </ul>
@@ -162,7 +169,7 @@
                             <div>
                                 <h4 class="font-bold">2. Na Estação Cliente:</h4>
                                 <ul class="list-disc list-inside text-sm">
-                                    <li>No arquivo `ARQ-ID`, altere o `DataSource` para: `IP_DO_SERVIDOR,PORTA`.</li>
+                                    <li>No arquivo `ArqD`, altere o `DataSource` para: '\\IP_DO_SERVIDOR\INSTÂNCIA,PORTA'.</li>
                                     <li>Use o comando `ping` no CMD para testar a comunicação.</li>
                                 </ul>
                             </div>
@@ -191,6 +198,19 @@
                                     <li>Volte ao servidor, em `Configurações > Filial > Bridge`, e **autorize a nova estação**.</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-center text-[#003B73] mb-4">Entendendo os Arquivos de Conexão</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg">`ArqD`</h4>
+                            <p class="text-sm mt-2">É o "mapa" da **Estação Cliente**. Ele aponta para o endereço de IP do servidor. <br>Ex: `DataSource: \\192.168.0.150\sql2014,1434`</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg">`ArqD.servidor`</h4>
+                            <p class="text-sm mt-2">É o "mapa" do **Servidor**. Ele aponta para si mesmo, usando `localhost`. <br>Ex: `DataSource: localhost\sql2014`</p>
                         </div>
                     </div>
                 </div>
